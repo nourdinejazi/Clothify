@@ -22,7 +22,7 @@ const CartItem: React.FC<CartItemProps> = ({
   };
 
   return ( 
-    <li className="flex sm:flex-col justify-center items-center py-6 border-b border-gre">
+    <li className="flex sm:flex-col justify-center  items-center py-6 border-b border-gre">
       <div className="relative   rounded-md overflow-hidden  h-[250px]  w-[250px]">
       <div className="absolute z-10 right-0 top-0 p-1">
           <IconButton onClick={onRemove} icon={<X size={15} />} />
@@ -34,14 +34,13 @@ const CartItem: React.FC<CartItemProps> = ({
           className="object-cover object-center"
         />
       </div>
-      <div className="relative flex flex-1 flex-col justify-center items-center ml-6">
+      <div className="relative flex flex-1 flex-col justify-center items-center ">
         <div className="relative  flex flex-col justify-center pt-2 items-center gap-2">
           <div className="flex justify-between">
             <p className=" text-lg font-semibold text-black">
               {data.name}
             </p>
           </div>
-
           <div className="mt-1 flex text-sm">
             <p className="text-gray-500">{data.color.name}</p>
             <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">{data.size.name}</p>

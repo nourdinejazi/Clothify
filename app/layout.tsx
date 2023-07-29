@@ -22,7 +22,7 @@ export default function RootLayout({
         <ModalProvider />
         <ToastProvider />
         {children}
-        {/* <Footer ></Footer> */}
+        <Footer ></Footer>
       </body>
     </html>
     
