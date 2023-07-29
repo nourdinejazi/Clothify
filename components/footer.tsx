@@ -9,7 +9,7 @@ const Footer=()=>{
             <div className="sm:flex sm:flex-col  lg:flex justify-center items-center">
                 <div className="text-center w-1/3 sm:w-full sm:text-sm    flex flex-col gap-5">
                     <p className="text-2xl pt-4">Stay In Touch</p>
-                    <p className=" text-sm   p-4">
+                    <p className=" text-sm sm:text-xs  p-4">
                     Stay in the fashion loop and never miss a stylish beat! Join our Clothify community by subscribing to our newsletter and following us on social media. By doing so, you'll be the first to know about our latest collections, exclusive promotions, fashion tips, and more. Be a part of the Clothify family and let's stay connected as we embark on this fashionable journey together!
                     </p>
                 </div>
@@ -23,7 +23,7 @@ const Footer=()=>{
                 </div>
             </div>
 
-            <div className="  absolute flex items-center justify-center     bottom-0 w-full  text-bla bg-gre h-12">
+            <div className="  absolute flex items-center justify-center  sm:text-sm   bottom-0 w-full  text-bla bg-gre h-12">
                 © {new Date().getFullYear()}  CLOTHIFY. ALL RIGHT RESERVED 
             </div>
         </footer>
