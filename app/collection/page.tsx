@@ -9,6 +9,9 @@ import HeaderPage from "@/components/header-page";
 
 
 
+export const revalidate = 0
+
+
 const Collection = async () => {
     
     const categories = await getCategories();
