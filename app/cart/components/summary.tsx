@@ -71,11 +71,11 @@ const Summary = () => {
           <div className="text-base font-medium text-gray-900">Order total</div>
          <Currency value={totalPrice} className="font-bold text-black text-lg	" />
         </div>
-        <div className="flex flex-col items-center justify-center gap-5">
-            <div className=" w-full  flex flex-col gap-5 ">
-              <div className=" flex justify-between items-center">Name  <input type="text" className="p-2 sm:w-[200px]"  onChange={(ev :any)=> setName(ev.target.value)} /></div>
-              <div className=" flex justify-between  items-center">adresse  <input type="text"className="p-2  sm:w-[200px] "  onChange={(ev :any)=> setAddress(ev.target.value)} /></div>
-              <div className=" flex justify-between  items-center">Phone Number  <input type="text" className="p-2  sm:w-[200px]"  onChange={(ev :any)=> setPhone(ev.target.value)} /></div>
+        <div className="flex flex-col   gap-5">
+            <div className=" w-full  flex flex-col items-center justify-center   gap-5 ">
+              <div className=" flex justify-between items-center">  <input placeholder="Name" type="text" className="p-2 sm:w-[200px]"  onChange={(ev :any)=> setName(ev.target.value)} /></div>
+              <div className=" flex justify-between  items-center">  <input placeholder="adresse" type="text"className="p-2  sm:w-[200px] "  onChange={(ev :any)=> setAddress(ev.target.value)} /></div>
+              <div className=" flex justify-between  items-center">  <input placeholder="Phone Number" type="text" className="p-2  sm:w-[200px]"  onChange={(ev :any)=> setPhone(ev.target.value)} /></div>
             </div>
         </div>
       </div>
