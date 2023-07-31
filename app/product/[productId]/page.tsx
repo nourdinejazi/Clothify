@@ -29,7 +29,7 @@ const ProductPage :React.FC<ProductPageProps> = async({
         categoryId : product?.category?.id
     })
     return ( 
-        <div className="flex  flex-col lg:gap-10 ">
+        <div className="flex  flex-col lg:gap-10 lg:mb-[300px] md:mb-[300px]   ">
             <HeaderPage title="Product Details" description={description} path={`HOME > COLLECTION > ${product.category.name.toUpperCase()} > PRODUCT DETAILS`} ></HeaderPage>
             <div>
                 <ProductPageClient  product={product}   ></ProductPageClient>

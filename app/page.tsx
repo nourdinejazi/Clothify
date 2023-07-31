@@ -7,6 +7,7 @@ import ProductList from '@/components/product-list'
 import InfoBox from '@/components/info-box'
 import getCategories from '@/actions/get-categories'
 import CategoryNav from '@/components/category-nav'
+import Link from 'next/link'
 
 
 export const revalidate = 0
@@ -14,9 +15,13 @@ export const revalidate = 0
 
 export default async function  Home() {
   
-  const homebill= await getBillboard("e7d1b6e2-d367-4990-91f9-258df5470dd3")
-  const homebillf= await getBillboard("9fdc45c2-934f-4424-835f-0d991c4aca49")
-  const products = await getProducts({isFeatured : true})
+
+
+  const homebill= await getBillboard("91fe8af7-b5e7-4b33-8674-52465fbda984")
+  const homebillf= await getBillboard("940bf886-7377-4084-8c45-47ed96bb4149")
+  const pagebill = await getBillboard("37b8bd7a-3720-4f8d-aadc-7272fb3f76a1")
+  const productsMen = await getProducts({gender : "Men"})
+  const productsWomen = await getProducts({gender : "Woman"})
   const categories= await getCategories()
   return (
     <div className='flex flex-col relative w-full h-full mb-32  '>
@@ -30,18 +35,18 @@ export default async function  Home() {
                       <p className="text-sm text-center ">
                       Step into a world where style meets versatility, where classic sophistication merges seamlessly with contemporary fashion.
                       </p>
-                      <button className="p-4 bg-transparent border-2 border-bla rounded-3xl    ">SHOP MEN</button>
+                      <button className="p-4 bg-transparent border-2 border-bla rounded-3xl    "><Link href='/collection'>SHOP MAN</Link></button>
                       <div><CategoryNav  data={categories}  /></div>
                   </div>
               </div>
           </div>
             <div className=" flex   lg:order-3  md:order-3 px-2 items-center justify-center  ">
                   <div className=' w-full '>
-                      <ProductList items={products} />
+                      <ProductList items={productsMen} />
                   </div>
             </div>  
         <div className='w-full   flex lg:flex-row md:flex-row  sm:flex-col lg:order-4 md:order-4 '>
-          <div className="  lg:w-[40%] md:w-[40%] sm:h-[850px] lg:h-[1000px] md:h-[1000px] bg-[url('/images/homebill3.png')] bg-center bg-cover"></div>
+          <div style={{backgroundImage  : `url(${pagebill?.imageUrl})`}} className="  lg:w-[40%] md:w-[40%] sm:h-[850px] lg:h-[1000px] md:h-[1000px]  bg-center bg-cover"></div>
           <div style={{backgroundColor : '#f8f8f8'}} className="lg:w-[60%] md:w-[60%] flex justify-start  items-center text-bla p-8 ">
                 <div className="flex flex-col items-center text-center gap-5 	  ">
                         <h2 className="text-bold">About Clothify</h2>
@@ -49,7 +54,7 @@ export default async function  Home() {
                     <p className="text-sm">
                     Step into the world of VogueVerse, where fashion becomes an art form and self-expression knows no boundaries. Our eclectic clothing store is a haven of style, carefully curated to cater to every taste and personality. With an unwavering commitment to quality craftsmanship, our garments not only make bold fashion statements but also ensure comfort and durability. Embracing diversity and inclusivity, our unisex lines celebrate individuality, providing fashion choices that transcend traditional norms. 
                     </p>
-                    <button className="p-2 bg-transparent border-2 border-bla rounded-3xl   ">Know More About Us</button>
+                    <button className="p-2 bg-transparent border-2 border-bla rounded-3xl   "><Link href='/about'>Know More About Us</Link></button>
                 </div>
             </div>
         </div>
@@ -82,14 +87,14 @@ export default async function  Home() {
                         <p className="text-sm text-center ">
                         Step into a world where style meets versatility, where classic sophistication merges seamlessly with contemporary fashion.
                         </p>
-                        <button className="p-4 bg-transparent border-2 border-bla rounded-3xl    ">SHOP WOMEN</button>
+                        <button   className="p-4 bg-transparent border-2 border-bla rounded-3xl    "><Link href='/collection'>SHOP WOMEN</Link></button>
                         <div><CategoryNav  data={categories}  /></div>
                     </div>
                 </div>
             </div>
             <div className=" flex   lg:order-6  md:order-6 px-2 items-center justify-center ">
                   <div className=' w-full '>
-                      <ProductList items={products} />
+                      <ProductList items={productsWomen} />
                   </div>
             </div> 
         </div>

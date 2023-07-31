@@ -44,7 +44,7 @@ const CategoryPage : React.FC<CategoryPageProps>= async ({
     
 
     return ( 
-        <div className="flex flex-col gap-10 ">
+        <div className="flex flex-col gap-10 sm:mb-[200px] lg:mb-[300px] md:mb-[300px] ">
         <HeaderPage  title={category.name} description={description} path={`HOME > COLLECTION > ${category.name}`} ></HeaderPage>
 
         <div className="flex  sm:flex-col    gap-10  w-full p-8">

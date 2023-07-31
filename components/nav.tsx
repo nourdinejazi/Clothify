@@ -16,7 +16,7 @@ const Nav : React.FC<NavProps> = ({
     
 
     return ( 
-        <div className="absolute h-full flex flex-col   font-bold my-2">
+        <div className="absolute  flex flex-col   font-bold my-2">
             <div className="lg:hidden md:hidden p-4">
                 <Popover>
                     <div className={cn("text-2xl text-bla mb-16 pr-8 flex  items-center justify-center gap-2",className)}><Link href={'/'}>CLOTHIFY</Link><Popover.Button><Menu className={`${className ? className : "text-black"}`}  size={30} /></Popover.Button></div>

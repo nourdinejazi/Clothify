@@ -1,7 +1,7 @@
 "use client"
 
 import { Billboard  } from "@/types";
-
+import Link from "next/link";
 import MenuBar from "./menu-bar";
 import Nav from "./nav";
 
@@ -27,7 +27,7 @@ const HomeBillboards : React.FC<BillboardProps>= ({
                     <p className="text-sm">
                     offers a diverse range of stylish and comfortable apparel.
                     </p>
-                    <button className="p-4  sm:p-2  bg-transparent border-2 border-gre rounded-3xl    ">SHOP MEN</button>
+                    <button className="p-4  sm:p-2  bg-transparent border-2 border-gre rounded-3xl    "><Link href='/collection'>SHOP MEN</Link></button>
                 </div>
             </div>
          </div> 
@@ -39,7 +39,7 @@ const HomeBillboards : React.FC<BillboardProps>= ({
                         <p className="text-sm">
                         showcases a wide array of trendy and chic clothing.
                         </p>
-                        <button className="p-4 sm:p-2 bg-transparent border-2 border-gre rounded-3xl    ">SHOP WOMEN</button>
+                        <button className="p-4 sm:p-2 bg-transparent border-2 border-gre rounded-3xl    "><Link href='/collection'>SHOP WOMEN</Link></button>
                     </div>
                 </div>
          </div>

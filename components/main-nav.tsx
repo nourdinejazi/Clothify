@@ -39,7 +39,7 @@ const MainNav : React.FC<MainNavProp> = ({
         },
     ]
     return (
-    <div >
+    <div className="">
         <nav 
             className="flex flex-col sm:border border-gre p-8 sm:h-[300px] sm:bg-white  text-white"
         >
