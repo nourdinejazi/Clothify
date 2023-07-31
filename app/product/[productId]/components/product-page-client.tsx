@@ -24,7 +24,7 @@ const ProductPageClient :React.FC<ProductPageClientProps>= ({
             <ProductInfo  data={product} />
           </Tab.Panel>
         </Tab.Panels>
-         <Tab.List className={`fixed bottom-0   bg-white  w-full`}>
+         <Tab.List className={`fixed bottom-0    bg-white  w-full`}>
             <div className=" flex justify-center gap-5 items-center h-[70px] ">
                 <Tab className={`ui-selected:bg-gre rounded-xl my-2  px-4 h-[70%] focus:outline-none`}>Gallery</Tab>
                 <Tab className={`ui-selected:bg-gre rounded-xl my-2  px-4 h-[70%] focus:outline-none   `}>Product Info</Tab>
