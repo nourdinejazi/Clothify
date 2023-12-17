@@ -20,11 +20,9 @@ const description =
 
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
   const product = await getProduct(params.productId);
-  const suggested = await getProducts({
-    categoryId: product?.category?.id,
-  });
+
   return (
-    <div className="flex  flex-col lg:gap-10 lg:mb-[300px] md:mb-[300px]   ">
+    <div className="flex  flex-col lg:gap-10 lg:mb-[100px] md:mb-[100px]   ">
       <HeaderPage
         title="Product Details"
         description={description}
