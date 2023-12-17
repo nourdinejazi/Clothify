@@ -14,16 +14,13 @@ const PreviewModal = () => {
     return null;
   }
 
-  return ( 
-    <Modal 
-      open={previewModal.isOpen} 
-      onClose={previewModal.onClose}
-    >
+  return (
+    <Modal open={previewModal.isOpen} onClose={previewModal.onClose}>
       <div className="">
-          <ProductPageClient  product={product}   ></ProductPageClient>      
+        <ProductPageClient product={product}></ProductPageClient>
       </div>
     </Modal>
   );
-}
- 
+};
+
 export default PreviewModal;

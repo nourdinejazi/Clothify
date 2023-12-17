@@ -47,7 +47,7 @@ const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
     );
   } else {
     return (
-      <div className="flex justify-center items-center  md:mb-[300px] ld:mb-[300px]">
+      <div className="flex justify-center items-center  py-8">
         <Tab.Group as="div" className="flex gap-10   w-[700px]   ">
           <div className="  overflow-x-hidden h-[700px] overflow-y-auto  p-2  ">
             <Tab.List className="grid grid-cols-1 gap-6 w-[150px] ">
