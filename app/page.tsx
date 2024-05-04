@@ -15,10 +15,10 @@ import CategoryNav from "@/components/category-nav";
 import Link from "next/link";
 
 export default async function Home() {
-  const homebill = await getBillboard("91fe8af7-b5e7-4b33-8674-52465fbda984");
-  const homebillf = await getBillboard("940bf886-7377-4084-8c45-47ed96bb4149");
+  const homebill = await getBillboard("05557254-777b-4f53-ab36-f6975060663b");
+  const homebillf = await getBillboard("d4d37f40-8e45-484a-8e73-025a715f81d9");
 
-  const pagebill = await getBillboard("37b8bd7a-3720-4f8d-aadc-7272fb3f76a1");
+  const pagebill = await getBillboard("c88161a4-7ccf-405e-aa99-f22dcba49653");
 
   const productsMen = await getProducts({ gender: "Men" });
   const productsWomen = await getProducts({ gender: "Woman" });
